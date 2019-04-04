@@ -34,7 +34,7 @@ public class Game {
         }
         return a + "A" + b + "B";
     }
-    
+
     public void start(){
         String code = generateCode();
         while (true) {
