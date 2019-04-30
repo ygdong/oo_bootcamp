@@ -1,4 +1,4 @@
-package oo;
+package oo2;
 
 public abstract class AngleShape {
     public abstract  double getArea();

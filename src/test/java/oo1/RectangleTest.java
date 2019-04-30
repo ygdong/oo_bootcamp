@@ -1,5 +1,6 @@
-package oo;
+package oo1;
 
+import oo2.Rectangle;
 import org.junit.Before;
 import org.junit.Test;
 

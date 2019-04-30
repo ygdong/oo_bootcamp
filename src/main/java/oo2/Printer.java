@@ -1,4 +1,4 @@
-package oo;
+package oo2;
 
 public class Printer {
 

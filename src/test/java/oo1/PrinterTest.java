@@ -1,9 +1,11 @@
-package oo;
+package oo1;
 
+import oo2.Circle;
+import oo2.Printer;
+import oo2.Square;
+import oo2.Triangle;
 import org.junit.Before;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class PrinterTest {
 
