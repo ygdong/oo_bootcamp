@@ -30,9 +30,13 @@ public class Box<E extends GoodOrBadAble<E>> {
             if (best == null)
                 best = goodOrBadAbles[0];
             //best 和 goodOrBadAbles[i] 比较， 找最好的
-            best = standard.compare(best,goodOrBadAbles[i]);
+            best = standard.betterOne(best,goodOrBadAbles[i]);
         }
 
         return best;
+    }
+
+    public void addCookies(Cookie[] cookies) {
+
     }
 }

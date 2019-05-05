@@ -3,6 +3,7 @@ package oo3;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
 import java.util.TreeSet;
 
 import static org.junit.Assert.*;
@@ -53,7 +54,7 @@ public class BoxTest {
         box.add(rectangles);
 
         Rectangle best = box.getBestByMyFlovor(new Standard<Rectangle>() {
-            public Rectangle compare(Rectangle left, Rectangle right) {
+            public Rectangle betterOne(Rectangle left, Rectangle right) {
                 int leftArea = left.getLength() * left.getWidth();
                 int rightArea = right.getLength() * right.getWidth();
                 if (leftArea > rightArea)
@@ -65,5 +66,13 @@ public class BoxTest {
         box.getBestByMyFlovor((left, right) -> right);
 
 
+    }
+
+
+    @Test
+    public void testListSort() {
+        ArrayList<Rectangle> rectangles = new ArrayList<>();
+
+        rectangles.sort((x,y)->x.getLength()-y.getLength());
     }
 }
