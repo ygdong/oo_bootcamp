@@ -9,6 +9,8 @@ public class UI {
         jFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
         Ball ball = new Ball(100, 100, 100);
+        ball.addBehavior(bouncing);
+        ball.addBehavior(elastic);
 
         JPanel contentPane = new MyPanel(ball);
         contentPane.setPreferredSize(new Dimension(800,600));
@@ -17,7 +19,7 @@ public class UI {
         jFrame.setVisible(true);
 
         while (true) {
-            ball.setX(ball.getX()+1);
+            ball.update();
             contentPane.repaint();
             Thread.sleep(10);
         }
