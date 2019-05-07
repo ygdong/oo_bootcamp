@@ -19,6 +19,6 @@ public class MyPanel extends JPanel {
         int radius = ball.getRadius();
         int x = ball.getX() - radius;
         int y = ball.getY() - radius;
-        g.fillOval(x, y, radius, radius);
+        g.fillOval(x, y, radius*2, radius*2);
     }
 }
