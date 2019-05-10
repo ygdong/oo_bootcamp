@@ -7,30 +7,21 @@ public class Rover {
     private Direction[] directions={Direction.N,Direction.E,Direction.S,Direction.W};
     private int directionIndex=0;
 
-
-    public void command(char c){
-        switch (c){
-            case 'L': turnLeft();break;
-            case 'R': turnRight();break;
-            case 'M': move();break;
-        }
-    }
-
-    private void turnLeft(){
+    public void turnLeft(){
         if (directionIndex==0)
             directionIndex=3;
         else
             directionIndex--;
     }
 
-    private void turnRight(){
+    public void turnRight(){
         if (directionIndex==3)
             directionIndex=0;
         else
             directionIndex++;
     }
 
-    private void move(){
+    public void move(){
         Direction currentDirection = directions[directionIndex];
         x+= currentDirection.getX();
         y+= currentDirection.getY();
@@ -41,8 +32,4 @@ public class Rover {
     }
 
 
-    public void command(String rrm) {
-        for (char ch:rrm.toCharArray())
-            command(ch);
-    }
 }
