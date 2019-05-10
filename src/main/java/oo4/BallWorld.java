@@ -37,14 +37,4 @@ public class BallWorld extends JPanel {
             g.fillOval(x, y, radius * 2, radius * 2);
         }
     }
-//    @Override
-//    protected void paintComponent(Graphics g) {
-//        super.paintComponent(g);
-//        g.setColor(Color.BLACK);
-//
-//        int radius = ball.getRadius();
-//        int x = ball.getX() - radius;
-//        int y = ball.getY() - radius;
-//        g.fillOval(x, y, radius*2, radius*2);
-//    }
 }
