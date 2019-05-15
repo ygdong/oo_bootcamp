@@ -2,6 +2,8 @@ package oo4;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,6 +17,12 @@ public class BallWorld extends JPanel {
     public BallWorld(Ball ball) {
         this.ball = ball;
         setPreferredSize(new Dimension(WIDTH, HEIGHT));
+        JButton button = new JButton("点击我");
+        button.setSize(30,15);
+
+        button.addActionListener(new ClickChangeColor());
+
+        this.add(button);
     }
     public void addBall(Ball ball){
         balls.add(ball);
