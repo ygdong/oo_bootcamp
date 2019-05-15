@@ -1,4 +1,4 @@
-package pattern;
+package pattern.single_instance;
 
 public class EmployeeDao {
     private static EmployeeDao employeeDao;
