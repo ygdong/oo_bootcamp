@@ -4,7 +4,7 @@ public class Cookie implements GoodOrBadAble<Cookie>{
 
 
 
-    private final int chocolate;
+    private  int chocolate;
 
     public Cookie(int numberOfChocolate) {
         this.chocolate = numberOfChocolate;
@@ -22,5 +22,9 @@ public class Cookie implements GoodOrBadAble<Cookie>{
 
         Cookie another1 = (Cookie) another;
         return this.chocolate>another1.chocolate;
+    }
+
+    public void setChocolatorNumber(int i) {
+        this.chocolate=i;
     }
 }
